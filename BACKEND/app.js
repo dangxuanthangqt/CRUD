@@ -14,7 +14,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 // app.use(cors({origin: 'http://localhost:4000'}))
 var mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://thang:thang@cluster0-q8vge.mongodb.net/CRUD?retryWrites=true&w=majority', {useNewUrlParser: true,  useUnifiedTopology: true})
+// mongoose.connect('mongodb+srv://thang:thang@cluster0-q8vge.mongodb.net/CRUD?retryWrites=true&w=majority', {useNewUrlParser: true,  useUnifiedTopology: true})
+// .then(() => console.log('DB Connected!'))
+// .catch(err => {
+// console.log(Error, err.message);
+// })
+mongoose.connect('mongodb://localhost/mongooes', {useNewUrlParser: true,  useUnifiedTopology: true,useFindAndModify: false })
 .then(() => console.log('DB Connected!'))
 .catch(err => {
 console.log(Error, err.message);

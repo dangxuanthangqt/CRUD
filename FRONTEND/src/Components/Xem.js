@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import Row from './Row';
-import apiCaller from '../ApiCaller/apiCaller';
-const axios = require('axios');
+
 
 export class Xem extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            products: []
-        }
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         products: []
+    //     }
+    // }
 
-    componentDidMount=()=> {
+    componentDidMount = () => {
 
         // axios.get('http://localhost:4000/xem')
         //     .then( (response) =>{
@@ -20,7 +18,7 @@ export class Xem extends Component {
         //             products: response.data
         //         })
         //         console.log(response.data);
-                
+
         //         // this.setState({
         //         //     products : response.data
         //         // })
@@ -29,28 +27,28 @@ export class Xem extends Component {
         //         // handle error
         //         console.log(error);
         //     })
-        apiCaller('/xem', 'GET',null).then(res=>{
-            this.setState({
-                products : res.data
-            })
-            
-        }).then(res =>{
-            console.log("111111111111111111111111111111111111111111111111111111")
-        })
+        // apiCaller('/xem', 'GET', null).then(res => {
+        //     this.setState({
+        //         products: res.data
+        //     })
+
+        // }).then(res => {
+        //     console.log("111111111111111111111111111111111111111111111111111111")
+        // })
 
     }
     render() {
-        console.log(this.state.products)
-        var {products} = this.state;
-        var list = products.map((e, index) =>{
-            return <Row key={index} element ={e} index={index}>
+        // console.log(this.state.products)
+        // var { products } = this.state;
+        // var list = products.map((e, index) => {
+        //     return <Row key={index} element={e} index={index}>
 
-            </Row>
-        })
+        //     </Row>
+        // })
         return (
 
-            <div className="mt-5 " >
-                <button type="button" className="btn btn-primary mb-2"> <i className="fa fa-plus" aria-hidden="true"></i> Them</button>
+            <div >
+              
                 <div className="card bg-light col-sm-12" >
 
                     <div className="card-header text-center">QUẢN LÝ CÔNG VIỆC</div>
@@ -69,17 +67,14 @@ export class Xem extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {list}
-                                {/* <tr>
-        <td scope="row"></td>
-        <td></td>
-        <td></td>
-    </tr> */}
+                            {this.props.children}
+               
                             </tbody>
                         </table>
 
                     </div>
                 </div>
+
             </div>
 
 

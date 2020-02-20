@@ -1,15 +1,12 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './Components/Header';
 
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+
 } from "react-router-dom";
-import Home from './Home';
-import RouterURL from '../RouterURL/RouterURL';
+
+import RouterURL from './RouterURL/RouterURL';
 function App() {
   return (
     <Router>

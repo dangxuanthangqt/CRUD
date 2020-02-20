@@ -26,16 +26,16 @@ export class Header extends Component {
                                     color: "red"
                                 }}
 
-                                className="nav-link" to="/xem">QUẢN LÝ CÔNG VIỆC</NavLink>
+                                className="nav-link" to="/quan-ly-san-pham">QUẢN LÝ SẢN PHẨM</NavLink>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <NavLink
                                 activeStyle={{
                                     backgroundColor: "gray",
                                     color: "red"
                                 }}
-                                className="nav-link" to="/them">THEM</NavLink>
-                        </li>
+                                className="nav-link" to="/them-san-pham">THEM</NavLink>
+                        </li> */}
                         {/* <li className="nav-item dropdown">
                             <NavLink className="nav-link dropdown-toggle" to="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</NavLink>
                             <div className="dropdown-menu" aria-labelledby="dropdownId">
